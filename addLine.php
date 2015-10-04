@@ -84,12 +84,24 @@
                             Ajouter une ligne
                         </h1>
                         <form action="addLine.php" method="post">
-                            distance : <input type="text" name="distance" placeholder="distance"><br/>
-                            frequence : <input type="text" name="frequence" placeholder="frequence"><br/>
-                            price : <input type="text" name="price" placeholder="price"><br/>
-                            time : <input type="text" name="time" placeholder="time"><br/>
-                            Ville de départ : <select name="listeCity1"><?php echo listeCity(); ?></select><br/>
-                            Ville d'arrivee : <select name="listeCity2"><?php echo listeCity(); ?></select><br/>
+                            <div class="form-group">
+                                <label>distance : </label><input type="text" name="distance" class="form-control" placeholder="distance">
+                            </div>
+                            <div class="form-group">
+                                <label>frequence : </label><input type="text" name="frequence" class="form-control" placeholder="frequence">
+                            </div>
+                            <div class="form-group">
+                                <label>price : </label><input type="text" name="price" class="form-control" placeholder="price">
+                            </div>
+                            <div class="form-group">
+                                <label>time : </label><input type="text" name="time" class="form-control" placeholder="time">
+                            </div>
+                            <div class="form-group">
+                                <label>Ville de départ : </label><select name="listeCity1" class="form-control"><?php echo listeCity(); ?></select>
+                            </div>
+                            <div class="form-group">
+                                <label>Ville d'arrivee : </label><select name="listeCity2" class="form-control"><?php echo listeCity(); ?></select>
+                            </div>
                             <input type="submit" class="btn btn-default" value="Ajouter">
                         </form>
                         <?php echo insertLine(); ?>

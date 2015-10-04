@@ -88,10 +88,13 @@
                              Durée moyenne des trajets prévus tel jour
                          </h3>
                         <form action="nbRoute.php" method="post">
-                            <div class="form-group"><label>numéro du jour : </label><input type="text" name="day" class="form-control" placeholder="numero du jour day"></div>
+                            <div class="form-group">
+                                <label>numéro du jour : </label>
+                                <input type="text" name="day" class="form-control" placeholder="numero du jour day">
+                            </div>
                             <input type="submit" class="btn btn-default" value="Calculer">
                         </form><br/>
-                        <u>Resultat(s) :</u> <br/><br/>
+                        <u>Resultat(s) :</u><br/><br/>
                         <?php echo avgRoutePerDay(); ?>
                     </div>
                 </div>
@@ -104,9 +107,20 @@
                              Durée moyenne des trajets d'une ligne de bus donnée d'une date à une autre date
                         </h3>
                         <form action="nbRoute.php" method="post">
-                            <div class="form-group"><label>Ligne : </label><select class="form-control"> <?php listeLigne(); ?> </select></div>
-                            <div class="form-group"><label>Date début : </label><input type="text" class="form-control"></div></div>
-                            <div class="form-group"><label>Date fin : </label><input type="text" class="form-control"></div>
+                            <div class="form-group">
+                                <label>Ligne : </label>
+                                <select class="form-control"> 
+                                    <?php listeLigne(); ?>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Date début : </label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Date fin : </label>
+                                <input type="text" class="form-control">
+                            </div>
                             <input type="submit" class="btn btn-default" value="Calculer">
                         </form><br/>
                         <?php echo avgRouteLineDatePerDate(); ?>
